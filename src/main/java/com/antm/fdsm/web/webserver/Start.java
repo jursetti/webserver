@@ -5,13 +5,22 @@ import io.vertx.core.Future;
 
 public class Start extends AbstractVerticle {
 
-  public void start(Future<Void> fut) {
+	public void main() {
+		try {
+			start();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void start(Future<Void> fut) {
 	  
 	  vertx
 	  	.createHttpServer().requestHandler(r -> {
 	  		r.response().end("<h1>Hello from my first Vert.x application</h1>");
 	  	})
-	  	.listen(9999, result -> {
+	  	.listen(443, result -> {
 	  		if ( result.succeeded() ) {
 	  			fut.complete();
 	  		}
