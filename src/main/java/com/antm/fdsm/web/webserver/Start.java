@@ -9,7 +9,7 @@ import io.vertx.core.net.JksOptions;
 
 public class Start extends AbstractVerticle {
 
-	private static final int PORT = 9009;
+	private static final int PORT = 8443;
 	
 	public void main() {
 		try {
