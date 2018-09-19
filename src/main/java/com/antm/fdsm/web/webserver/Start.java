@@ -9,6 +9,8 @@ import io.vertx.core.net.JksOptions;
 
 public class Start extends AbstractVerticle {
 
+	private static final int PORT = 9009;
+	
 	public void main() {
 		try {
 			start();
@@ -32,8 +34,8 @@ public class Start extends AbstractVerticle {
         	.requestHandler(r -> {
     	  		r.response().end("<h1>Hello from my first Vert.x application</h1>");
         	})
-        	.listen(8443);
-        
+        	.listen(PORT);
+        System.out.println("HTTP Server running on port " + PORT);
     }
         
 	/*
