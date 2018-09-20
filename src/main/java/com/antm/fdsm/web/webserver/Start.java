@@ -34,8 +34,14 @@ public class Start extends AbstractVerticle {
             }
         });
 
-        System.out.println("Start HTTP server");
-        httpServer.listen(PORT);
+        System.out.println("Start HTTP server on port " + PORT);
+        httpServer.listen(PORT, res -> {
+            if (res.succeeded()) {
+                System.out.println("HTTP server is ready!");
+              } else {
+                System.out.println("HTTP server failed!");
+              }
+            });
     }
     
 	/*
