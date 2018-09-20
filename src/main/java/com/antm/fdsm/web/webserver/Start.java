@@ -11,6 +11,7 @@ public class Start extends AbstractVerticle {
 
 	private static final int PORT = 8443;
 	
+	/*
 	public void main() {
 		try {
 			start();
@@ -19,6 +20,7 @@ public class Start extends AbstractVerticle {
 			e.printStackTrace();
 		}
 	}
+	*/
 	
     public void start() throws Exception {
 
