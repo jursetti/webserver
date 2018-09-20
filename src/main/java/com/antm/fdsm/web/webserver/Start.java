@@ -25,7 +25,7 @@ public class Start extends AbstractVerticle {
         jks.setPassword("Antm2017#");
         
         System.out.println("Create HTTP Server");
-        httpServer = vertx.createHttpServer(new HttpServerOptions().setSsl(true).setKeyStoreOptions(jks));
+        httpServer = vertx.createHttpServer(new HttpServerOptions().setSsl(true).setKeyStoreOptions(jks).setLogActivity(true));
 
         System.out.println("Create request handler");
         httpServer.requestHandler(new Handler<HttpServerRequest>() {
