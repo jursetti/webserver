@@ -26,7 +26,7 @@ public class Start extends AbstractVerticle {
         
 		System.out.println("Get jks file");
         JksOptions jks = new JksOptions();
-        jks.setPath("/home/opc/certs/fdsm-compute-dev-adm-web.anthem.com.jks");
+        jks.setPath("/home/opc/certs/fdsm-compute-dev-adm-web.anthem.com");
         jks.setPassword("Antm2017#");
 
         System.out.println("Create HTTP Server");
