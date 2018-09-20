@@ -13,6 +13,7 @@ import io.vertx.core.net.JksOptions;
 public class Start extends AbstractVerticle {
 
 	private static final int PORT = 8443;
+	private static final String WEBROOT = "content/";
 	
     private HttpServer httpServer = null;
 
@@ -31,6 +32,15 @@ public class Start extends AbstractVerticle {
         httpServer.requestHandler(new Handler<HttpServerRequest>() {
             public void handle(HttpServerRequest request) {
                 System.out.println("HTTP Server is running");
+                if (request.path().equals("/")) {
+                	request.response().sendFile(WEBROOT + "index.html");
+                }
+                else if  (request.path().equals("/index.html")) {
+                	request.response().sendFile(WEBROOT + "index.html");
+                }
+                else {
+                	request.response().sendFile(WEBROOT + request.path());
+                }
             }
         });
 
