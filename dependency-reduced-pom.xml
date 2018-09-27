@@ -10,7 +10,7 @@
   <groupId>com.antm.fdsm.web</groupId>
   <artifactId>webserver</artifactId>
   <name>webserver</name>
-  <version>0.1.3</version>
+  <version>0.1.4</version>
   <url>http://maven.apache.org</url>
   <build>
     <resources>

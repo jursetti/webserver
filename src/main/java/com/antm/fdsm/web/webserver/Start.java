@@ -44,7 +44,8 @@ public class Start extends AbstractVerticle {
                 	Calendar calendar = new Calendar();
                 	Logger.info("Create calendarHtml string from calendar object");
                 	String calendarHtml = calendar.toString();
-            	  	request.response().end(calendarHtml);
+            	  	System.out.println(calendarHtml);
+                	request.response().end(calendarHtml);
                 }
                 else {
                 	request.response().sendFile(WEBROOT + request.path());
