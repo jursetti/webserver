@@ -38,6 +38,11 @@ public class Start extends AbstractVerticle {
                 else if  (request.path().equals("/index.html")) {
                 	request.response().sendFile(WEBROOT + "index.html");
                 }
+                else if  (request.path().equals("/calendar")) {
+                	Calendar calendar = new Calendar();
+                	String calendarHtml = calendar.toString();
+            	  	request.response().end(calendarHtml);
+                }  
                 else {
                 	request.response().sendFile(WEBROOT + request.path());
                 }
