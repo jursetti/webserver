@@ -13,7 +13,7 @@ public class Def {
 	public final static String SLACK_WEBHOOK_APP = "/services/TBNP5JXQT/BC27FMF2T/O3Yycwp0lZc8cI5qau1h9RzS";
 
 	public final static String HOME = Helpers.getHome();
-	public static final String DIR_PROJECT = "dualutil";
+	public static final String DIR_PROJECT = "webserver";
 	public static final String DIR_BKP = DIR_PROJECT + "/" +"bkp";
 	public static final String DIR_TMP = DIR_PROJECT +"/" +"tmp";
 	public static final String DIR_LOG = DIR_PROJECT + "/" + "log";
