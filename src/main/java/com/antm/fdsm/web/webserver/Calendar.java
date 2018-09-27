@@ -1,6 +1,5 @@
 package com.antm.fdsm.web.webserver;
 
-import java.text.NumberFormat;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -21,7 +20,6 @@ public class Calendar {
 		Logger.info("Create calendar");
 		JsonArray events = new JsonArray();
 		events = getEvents();
-		//System.out.println(events);
 		String eventsPretty = events.encodePrettily(); 
 		System.out.println(eventsPretty);
 		

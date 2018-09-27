@@ -14,7 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
   	<maven.compiler.source>1.8</maven.compiler.source>
-    
+    <shade.main.class>com.antm.fdsm.web.webserver.Start</shade.main.class>
   </properties>
 
   <dependencies>
@@ -45,6 +45,12 @@
     	<version>0.4.5</version>
     </dependency>
   </dependencies>
+  <parent>
+  	<groupId>com.antm</groupId>
+  	<artifactId>fdsm</artifactId>
+  	<version>0.0.2</version>
+  	<relativePath>../../</relativePath>
+  </parent>
     <build>
   	<resources>
   		<resource>

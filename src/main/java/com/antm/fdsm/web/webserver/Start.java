@@ -31,7 +31,7 @@ public class Start extends AbstractVerticle {
         System.out.println("Create request handler");
         httpServer.requestHandler(new Handler<HttpServerRequest>() {
             public void handle(HttpServerRequest request) {
-                System.out.println("HTTP Server is running");
+                System.out.println("Launch page " + request.path());
                 if (request.path().equals("/")) {
                 	request.response().sendFile(WEBROOT + "index.html");
                 }
@@ -42,7 +42,7 @@ public class Start extends AbstractVerticle {
                 	Calendar calendar = new Calendar();
                 	String calendarHtml = calendar.toString();
             	  	request.response().end(calendarHtml);
-                }  
+                }
                 else {
                 	request.response().sendFile(WEBROOT + request.path());
                 }
