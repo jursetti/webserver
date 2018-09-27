@@ -58,6 +58,7 @@ public class Calendar {
 				"  HOLIDAY\n" +
 				"from calendar";
 		try {
+			Logger.info("Run sql query");
 			eventData = hypfinusrd.query(sqlSelect).get();
 			Logger.info("Retrieved [{}] records",eventData.size());
 			
