@@ -15,7 +15,7 @@ public class Calendar {
 
 	private final static Singleton dbHypfinusrdService = Singleton.HYPFINUSRD.setDirs(Def.DIRS).setSlackApp(Def.SLACK_WEBHOOK_APP);
 	
-	public static void main (String[] args ) {
+	public static void main(String[] args ) {
 		
 		Logger.info("Create calendar");
 		JsonArray events = new JsonArray();
@@ -23,10 +23,24 @@ public class Calendar {
 		String eventsPretty = events.encodePrettily(); 
 		System.out.println(eventsPretty);
 		
-		createCalendar(events);
+		String html = createHtml(events);
+		System.out.println(html);
 		
 	}
 
+	public String createCalendar() {
+		
+		Logger.info("Create calendar");
+		JsonArray events = new JsonArray();
+		events = getEvents();
+		String eventsPretty = events.encodePrettily(); 
+		System.out.println(eventsPretty);
+		
+		String calendarHtml = createHtml(events);
+		return calendarHtml;
+		
+	}
+	
 	private static JsonArray getEvents() {
 
 		Logger.info("Get calendar events");
@@ -91,7 +105,7 @@ public class Calendar {
 	}
 
 
-	private static void createCalendar(JsonArray events) {
+	private static String createHtml(JsonArray events) {
 	
 		String html = "<!DOCTYPE html>\r\n" + 
 				"<html>\r\n" + 
@@ -138,6 +152,7 @@ public class Calendar {
 				"\r\n" + 
 				"</body>\r\n" + 
 				"</html>";
+		return html;
 	}
 	
 }

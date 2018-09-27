@@ -42,8 +42,8 @@ public class Start extends AbstractVerticle {
                 else if  (request.path().equals("/calendar")) {
                 	Logger.info("Create calendar object");
                 	Calendar calendar = new Calendar();
-                	Logger.info("Create calendarHtml string from calendar object");
-                	String calendarHtml = calendar.toString();
+                	Logger.info("Create calendarHtml");
+                	String calendarHtml = calendar.createCalendar();
             	  	System.out.println(calendarHtml);
                 	request.response().end(calendarHtml);
                 }
