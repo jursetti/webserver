@@ -1,6 +1,7 @@
 package com.antm.fdsm.web.webserver;
 
 import com.antm.fdsm.web.webserver.Def;
+import com.antm.fdsm.web.webserver.Calendar;
 import org.pmw.tinylog.Logger;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
@@ -39,7 +40,9 @@ public class Start extends AbstractVerticle {
                 	request.response().sendFile(WEBROOT + "index.html");
                 }
                 else if  (request.path().equals("/calendar")) {
+                	Logger.info("Create calendar object");
                 	Calendar calendar = new Calendar();
+                	Logger.info("Create calendarHtml string from calendar object");
                 	String calendarHtml = calendar.toString();
             	  	request.response().end(calendarHtml);
                 }
