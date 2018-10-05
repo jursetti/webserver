@@ -13,7 +13,7 @@ import io.vertx.core.json.JsonObject;
 
 public class Calendar {
 
-	private final static Singleton dbHypfinusrdService = Singleton.HYPFINUSRD.setDirs(Def.DIRS).setSlackApp(Def.SLACK_WEBHOOK_APP);
+	private final static Singleton dbCdbdfmService = Singleton.CDBDFM.setDirs(Def.DIRS).setSlackApp(Def.SLACK_WEBHOOK_APP);
 	
 	public static void main(String[] args ) {
 		
@@ -46,7 +46,7 @@ public class Calendar {
 		Logger.info("Get calendar events");
 		List<JsonArray> eventData;
 		JsonArray events = new JsonArray();
-		DatabaseService hypfinusrd = new DatabaseService(dbHypfinusrdService);
+		DatabaseService cdbdfm = new DatabaseService(dbCdbdfmService);
 		String sqlSelect =  
 				"select\n" +
 				"  ID,\n" +
@@ -59,7 +59,7 @@ public class Calendar {
 				"from calendar";
 		try {
 			Logger.info("Run sql query");
-			eventData = hypfinusrd.query(sqlSelect).get();
+			eventData = cdbdfm.query(sqlSelect).get();
 			Logger.info("Retrieved [{}] records",eventData.size());
 			
 			if ( eventData.size() == 0 ) {
