@@ -90,7 +90,7 @@ public class Calendar {
 					}
 					events.add(event);
 					if ( holiday.matches("Y") ) {
-						event.put("color", "#D6EAF8");
+						event.put("color", "#09C123");
 					}
 
 				}
@@ -111,24 +111,31 @@ public class Calendar {
 		String html = "<!DOCTYPE html>\r\n" + 
 				"<html>\r\n" + 
 				"<head>\r\n" + 
+				"<title>FDSM Calendar</title>\r\n" +
 				"<meta charset='utf-8' />\r\n" + 
-				"<link href='../fullcalendar.min.css' rel='stylesheet' />\r\n" + 
-				"<link href='../fullcalendar.print.min.css' rel='stylesheet' media='print' />\r\n" + 
-				"<script src='../lib/moment.min.js'></script>\r\n" + 
-				"<script src='../lib/jquery.min.js'></script>\r\n" + 
-				"<script src='../fullcalendar.min.js'></script>\r\n" + 
+				"<link href='../fullcalendar/fullcalendar.min.css' rel='stylesheet' />\r\n" + 
+				"<link href='../fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />\r\n" + 
+				"<script src='../fullcalendar/lib/moment.min.js'></script>\r\n" + 
+				"<script src='../fullcalendar/lib/jquery.min.js'></script>\r\n" + 
+				"<script src='../fullcalendar/fullcalendar.min.js'></script>\r\n" + 
 				"<script>\r\n" + 
 				"\r\n" + 
-				"  $(document).ready(function() {\r\n" + 
+				"	$(document).ready(function() {\r\n" + 
 				"\r\n" + 
-				"    $('#calendar').fullCalendar({\r\n" + 
-				"      editable: true,\r\n" + 
-				"      eventLimit: true, // allow \"more\" link when too many events\r\n" + 
-				"      events: \r\n" +
+				"		$('#calendar').fullCalendar({\r\n" +
+			    "			header: {" +
+			    "				left: 'prev,next,today'," +
+			    "				center: 'title'," +
+			    "				right: 'month,agendaWeek,agendaDay,listWeek'" +
+			    "			}," +
+			    "			navLinks: true, // can click day/week names to navigate views" +
+			    "			editable: true," +
+			    "			eventLimit: true, // allow 'more' link when too many events" +
+				"			events: \r\n" +
 				events +
-				"    });\r\n" + 
+				"		});\r\n" + 
 				"\r\n" + 
-				"  });\r\n" + 
+				"	});\r\n" + 
 				"\r\n" + 
 				"</script>\r\n" + 
 				"<style>\r\n" + 
