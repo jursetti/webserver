@@ -123,14 +123,14 @@ public class Calendar {
 				"	$(document).ready(function() {\r\n" + 
 				"\r\n" + 
 				"		$('#calendar').fullCalendar({\r\n" +
-			    "			header: {" +
-			    "				left: 'prev,next,today'," +
-			    "				center: 'title'," +
-			    "				right: 'month,agendaWeek,agendaDay,listWeek'" +
-			    "			}," +
-			    "			navLinks: true, // can click day/week names to navigate views" +
-			    "			editable: true," +
-			    "			eventLimit: true, // allow 'more' link when too many events" +
+			    "			header: {\\r\\n" +
+			    "				left: 'prev,next,today',\\r\\n" +
+			    "				center: 'title',\\r\\n" +
+			    "				right: 'month,agendaWeek,agendaDay,listWeek'\\r\\n" +
+			    "			},\\r\\n" +
+			    "			navLinks: true, // can click day/week names to navigate views\\r\\n" +
+			    "			editable: true,\\r\\n" +
+			    "			eventLimit: true, // allow 'more' link when too many events\\r\\n" +
 				"			events: \r\n" +
 				events +
 				"		});\r\n" + 
