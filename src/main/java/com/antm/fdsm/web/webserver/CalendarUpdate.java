@@ -71,9 +71,10 @@ public class CalendarUpdate {
 			allDay = "N";
 		}
 		
-		String isHoliday = "N";
-		if ( holiday.equals("on") ) {
-			isHoliday = "Y";
+		// Is the holiday checkbox is checked the value is on. If not checked the value is null.
+		String isHoliday = "Y";
+		if ( isNullOrEmpty(holiday) ) {
+			isHoliday = "N";
 		}
 		
 		Logger.info("Insert data: {},{},{},{},{},{},{}",nextId,event,startDateFmt,endDateFmt,allDay,isHoliday,url);
@@ -82,4 +83,10 @@ public class CalendarUpdate {
 		
 		
 	}
+	
+    public static boolean isNullOrEmpty(String str) {
+        if(str != null && !str.isEmpty())
+            return false;
+        return true;
+    }
 }
