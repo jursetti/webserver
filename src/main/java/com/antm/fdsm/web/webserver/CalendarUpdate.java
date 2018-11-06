@@ -79,8 +79,12 @@ public class CalendarUpdate {
 		
 		Logger.info("Insert data: {},{},{},{},{},{},{}",nextId,event,startDateFmt,endDateFmt,allDay,isHoliday,url);
 		
+		String sqlInsert =  
+		  "INSERT INTO FDSMOPS.CALENDAR ( ID, TITLE, ALLDAY, STARTDT, ENDDT, URL, HOLIDAY )\n" +
+		  "VALUES ( " + nextId + "," + event + ","+ allDay + "," + startDateFmt + "," + endDateFmt + "," + url + "," + holiday + ")";
+		Logger.info("Insert SQL: {}",sqlInsert);
 		
-		
+		cdbdfm.executeUpdate(sqlInsert);
 		
 	}
 	
