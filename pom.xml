@@ -4,7 +4,7 @@
 
   <groupId>com.antm.fdsm.web</groupId>
   <artifactId>webserver</artifactId>
-  <version>0.2.3</version>
+  <version>0.2.4</version>
   <packaging>jar</packaging>
 
   <name>webserver</name>
@@ -37,7 +37,7 @@
     <dependency>
     	<groupId>com.antm.fdsm.orcl</groupId>
     	<artifactId>odc</artifactId>
-    	<version>0.4.5</version>
+    	<version>0.5.1</version>
     </dependency>
     <dependency>
     	<groupId>com.antm.fdsm.orcl</groupId>
