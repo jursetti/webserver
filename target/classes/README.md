@@ -1,2 +1,0 @@
-# webserver
-Basic vertx webserver

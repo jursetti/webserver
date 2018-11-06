@@ -128,6 +128,7 @@ public class Calendar {
 			    "				center: 'title',\r\n" +
 			    "				right: 'month,agendaWeek,agendaDay,listWeek'\r\n" +
 			    "			},\r\n" +
+			    "           weekNumbers: true,\r\n" + 
 			    "			navLinks: true, // can click day/week names to navigate views\r\n" +
 			    "			editable: true,\r\n" +
 			    "			eventLimit: true, // allow 'more' link when too many events\r\n" +
