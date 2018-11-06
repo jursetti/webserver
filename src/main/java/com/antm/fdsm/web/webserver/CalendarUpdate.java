@@ -63,8 +63,8 @@ public class CalendarUpdate {
 		
 		// Date format string
 		String dateFormat = "MM/DD/YYYY HH:MI AMPM";
-		String startDateFmt = "TO_CHAR(" + startDate + "," + dateFormat + ")";
-		String endDateFmt = "TO_CHAR(" + endDate + "," + dateFormat + ")";
+		String startDateFmt = "TO_CHAR(" + startDate + ",'" + dateFormat + "')";
+		String endDateFmt = "TO_CHAR(" + endDate + ",'" + dateFormat + "')";
 		
 		String allDay = "Y";
 		if ( ! startDate.contains("12:00 AM") ) {
@@ -72,7 +72,7 @@ public class CalendarUpdate {
 		}
 		
 		String isHoliday = "N";
-		if ( holiday == "on" ) {
+		if ( holiday.equals("on") ) {
 			isHoliday = "Y";
 		}
 		
