@@ -49,6 +49,16 @@ public class Start extends AbstractVerticle {
                 }
                 else if  (request.path().equals("/calendarUpdate")) {
                 	Logger.info("Update calendar");
+            		String event     = request.getParam("event");
+            		String startDate = request.getParam("startDate");
+            		String endDate   = request.getParam("endDate");
+            		String holiday   = request.getParam("holiday");
+            		String url       = request.getParam("url");
+            		Logger.info("Event: {}", event);
+            		Logger.info("Start Date: {}", startDate);
+            		Logger.info("End Date: {}", endDate);
+            		Logger.info("Holiday: {}", holiday);
+            		Logger.info("URL: {}", url);
                 	CalendarUpdate calendar = new CalendarUpdate();
                 	calendar.calendarUpdate(request);
                 }
