@@ -62,7 +62,7 @@ public class CalendarUpdate {
 		int nextId = lastId + 1;
 		
 		// Date format string
-		String dateFormat = "MM/DD/YYYY HH:MI AMPM";
+		String dateFormat = "MM/DD/YYYY HH:MI AM";
 		String startDateFmt = "TO_DATE('" + startDate + "','" + dateFormat + "')";
 		
 		String endDateFmt = "TO_DATE('" + endDate + "','" + dateFormat + "')";
