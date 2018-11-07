@@ -63,9 +63,9 @@ public class CalendarUpdate {
 		
 		// Date format string
 		String dateFormat = "MM/DD/YYYY HH:MI AMPM";
-		String startDateFmt = "TO_CHAR('" + startDate + "','" + dateFormat + "')";
+		String startDateFmt = "TO_DATE('" + startDate + "','" + dateFormat + "')";
 		
-		String endDateFmt = "TO_CHAR('" + endDate + "','" + dateFormat + "')";
+		String endDateFmt = "TO_DATE('" + endDate + "','" + dateFormat + "')";
 		if ( isNullOrEmpty(endDate) ) {
 			endDateFmt = "''";	
 		}
