@@ -1,13 +1,14 @@
 package com.antm.fdsm.web.webserver;
 
 import com.antm.fdsm.web.webserver.Def;
-import com.antm.fdsm.web.webserver.Calendar;
+import com.antm.fdsm.web.webserver.Calendar.*;
 import org.pmw.tinylog.Logger;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.http.HttpServerRequest;
+import io.vertx.core.json.JsonArray;
 import io.vertx.core.net.JksOptions;
 
 public class Start extends AbstractVerticle {
@@ -46,6 +47,13 @@ public class Start extends AbstractVerticle {
                 	String calendarHtml = calendar.createCalendar();
             	  	System.out.println(calendarHtml);
                 	request.response().end(calendarHtml);
+                }
+                else if  (request.path().equals("/getCalendarEvents")) {
+                	Logger.info("Get calendar events");
+                	JsonArray events = new JsonArray();
+            		events = Calendar.getEvents();
+            		String eventsPretty = events.encodePrettily(); 
+            		System.out.println(eventsPretty);
                 }
                 else if  (request.path().equals("/calendarUpdate")) {
                 	Logger.info("Update calendar");

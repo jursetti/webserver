@@ -41,7 +41,7 @@ public class Calendar {
 		
 	}
 	
-	private static JsonArray getEvents() {
+	public static JsonArray getEvents() {
 
 		Logger.info("Get calendar events");
 		List<JsonArray> eventData;
