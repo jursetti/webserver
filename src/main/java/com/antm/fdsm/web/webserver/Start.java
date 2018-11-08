@@ -50,10 +50,11 @@ public class Start extends AbstractVerticle {
                 }
                 else if  (request.path().equals("/getCalendarEvents")) {
                 	Logger.info("Get calendar events");
-                	JsonArray events = new JsonArray();
-            		events = Calendar.getEvents();
-            		String eventsPretty = events.encodePrettily(); 
-            		System.out.println(eventsPretty);
+                	//JsonArray events = new JsonArray();
+                	Calendar.getEvents();
+            		//events = Calendar.getEvents();
+            		//String eventsPretty = events.encodePrettily(); 
+            		//System.out.println(eventsPretty);
                 }
                 else if  (request.path().equals("/calendarUpdate")) {
                 	Logger.info("Update calendar");
