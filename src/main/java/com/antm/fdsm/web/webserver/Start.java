@@ -55,6 +55,7 @@ public class Start extends AbstractVerticle {
             		//events = Calendar.getEvents();
             		//String eventsPretty = events.encodePrettily(); 
             		//System.out.println(eventsPretty);
+                	System.exit(1);
                 }
                 else if  (request.path().equals("/calendarUpdate")) {
                 	Logger.info("Update calendar");
