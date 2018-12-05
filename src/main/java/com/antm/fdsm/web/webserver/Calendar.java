@@ -78,7 +78,6 @@ public class Calendar {
 
 					event.put("id", id);
 					event.put("title", title);
-					event.put("textColor", "white");
 					if ( allDay.matches("Y") ) {
 						event.put("allDay", true);
 					}
