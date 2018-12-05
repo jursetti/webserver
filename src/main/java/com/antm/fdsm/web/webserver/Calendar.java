@@ -91,6 +91,7 @@ public class Calendar {
 					events.add(event);
 					if ( holiday.matches("Y") ) {
 						event.put("color", "#09C123");
+						event.put("textColor", "white");
 					}
 
 				}
