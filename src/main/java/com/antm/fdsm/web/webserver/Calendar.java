@@ -78,6 +78,7 @@ public class Calendar {
 
 					event.put("id", id);
 					event.put("title", title);
+					event.put("textColor", "white");
 					if ( allDay.matches("Y") ) {
 						event.put("allDay", true);
 					}
@@ -91,7 +92,6 @@ public class Calendar {
 					events.add(event);
 					if ( holiday.matches("Y") ) {
 						event.put("color", "#09C123");
-						event.put("textColor", "white");
 					}
 
 				}
