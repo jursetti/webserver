@@ -90,6 +90,8 @@ public class CalendarUpdate {
 		Logger.info("Insert SQL: {}",sqlInsert);
 		
 		cdbdfm.executeUpdate(sqlInsert);
+		
+		return;
 
 	}
 	
